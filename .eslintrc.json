@@ -35,13 +35,33 @@
             "prefix": "app",
             "style": "camelCase"
           }
+        ],
+        "padding-line-between-statements": [
+          "error",
+          { "blankLine": "always", "prev": "*", "next": "return" },
+          { "blankLine": "always", "prev": "directive", "next": "*" },
+          { "blankLine": "always", "prev": "*", "next": "function" },
+          { "blankLine": "always", "prev": "function", "next": "*" },
+          { "blankLine": "always", "prev": "block-like", "next": "*" },
+          { "blankLine": "always", "prev": "*", "next": "block-like" }
         ]
       }
     },
     {
       "files": ["*.html"],
       "extends": ["plugin:@angular-eslint/template/recommended"],
-      "rules": {}
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "semi": true,
+            "trailingComma": "all",
+            "singleQuote": true
+          }
+        ],
+        "no-unused-vars": "warn",
+        "no-console": "off"
+      }
     }
   ]
 }

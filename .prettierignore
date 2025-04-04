@@ -1,0 +1,20 @@
+# Ignorar node_modules y build
+node_modules
+dist
+build
+coverage
+.out
+.next
+
+# Ignorar archivos específicos
+package-lock.json
+yarn.lock
+
+# Ignorar carpetas de configuración o salida
+.env
+.vscode
+.idea
+
+# Ignorar archivos generados por el sistema
+.DS_Store
+Thumbs.db
